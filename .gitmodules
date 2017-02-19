@@ -19,6 +19,3 @@
 [submodule "base"]
 	path = base
 	url = https://github.com/umasuo/base.git
-[submodule "file-service"]
-	path = file-service
-	url = https://github.com/umasuo/file-service.git
