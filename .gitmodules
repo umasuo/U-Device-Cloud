@@ -22,3 +22,6 @@
 [submodule "file-service"]
 	path = file-service
 	url = https://github.com/umasuo/file-service.git
+[submodule "device-info"]
+	path = device-info
+	url = https://github.com/umasuo/device-info.git
