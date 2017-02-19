@@ -25,3 +25,6 @@
 [submodule "device-info"]
 	path = device-info
 	url = https://github.com/umasuo/device-info.git
+[submodule "message-pusher"]
+	path = message-pusher
+	url = https://github.com/umasuo/message-pusher.git
