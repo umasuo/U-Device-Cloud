@@ -1,0 +1,6 @@
+[submodule "config-service"]
+	path = config-service
+	url = https://github.com/umasuo/config-service.git
+[submodule "config"]
+	path = config
+	url = https://github.com/umasuo/config.git
