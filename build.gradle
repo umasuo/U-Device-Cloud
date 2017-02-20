@@ -1,0 +1,5 @@
+
+// Specify the gradle wrapper version, all use 3.0
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.1'
+}
