@@ -75,10 +75,10 @@ subprojects {
 
     }
     apply plugin: 'java'
-    apply from: '../code_analyzer_test/pmd.gradle'
-    apply from: '../code_analyzer_test/checkstyle.gradle'
-    apply from: '../code_analyzer_test/findbugs.gradle'
-    apply from: '../code_analyzer_test/test_coverage.gradle'
+    apply from: '../code_analyzer/pmd.gradle'
+    apply from: '../code_analyzer/checkstyle.gradle'
+    apply from: '../code_analyzer/findbugs.gradle'
+    apply from: '../code_analyzer/test_coverage.gradle'
 
     // Specify the gradle wrapper version, all use 3.0
     task wrapper(type: Wrapper) {

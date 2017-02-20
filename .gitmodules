@@ -28,6 +28,6 @@
 [submodule "message-pusher"]
 	path = message-pusher
 	url = https://github.com/umasuo/message-pusher.git
-[submodule "code_analyzer_test"]
-	path = code_analyzer_test
-	url = https://github.com/umasuo/code_analyzer_test.git
+[submodule "code_analyzer"]
+	path = code_analyzer
+	url = https://github.com/umasuo/code_analyzer.git
