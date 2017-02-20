@@ -72,16 +72,41 @@ subprojects {
 
         // build docker image task
         apply from: '../docker_build.gradle'
-
     }
+
+    //for code analyzer
     apply plugin: 'java'
     apply from: '../code_analyzer/pmd.gradle'
     apply from: '../code_analyzer/checkstyle.gradle'
     apply from: '../code_analyzer/findbugs.gradle'
     apply from: '../code_analyzer/test_coverage.gradle'
 
+
+    apply plugin: 'jacoco'
+    test.useTestNG()
+
     // Specify the gradle wrapper version, all use 3.0
     task wrapper(type: Wrapper) {
         gradleVersion = '3.1'
     }
 }
+
+task codeCoverageReport(type: JacocoReport) {
+    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+
+    subprojects.each {
+        sourceSets it.sourceSets.main
+    }
+
+    reports {
+        xml.enabled true
+        xml.destination "${buildDir}/reports/jacoco/report.xml"
+        html.enabled false
+        csv.enabled false
+    }
+}
+
+codeCoverageReport.dependsOn {
+    subprojects*.test
+}
+

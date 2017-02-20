@@ -6,8 +6,8 @@ services:
 script:
   - gradle clean
   - gradle wrapper
+  - ./gradlew codeCoverageReport
   - ./gradlew build buildDocker --info
-
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
