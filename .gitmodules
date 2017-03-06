@@ -31,3 +31,6 @@
 [submodule "code_analyzer"]
 	path = code_analyzer
 	url = https://github.com/umasuo/code_analyzer.git
+[submodule "developer"]
+	path = developer
+	url = https://github.com/umasuo/developer.git

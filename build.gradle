@@ -62,6 +62,14 @@ project(':wechat') {
     }
 }
 
+project(':developer') {
+    apply plugin: 'java'
+    jar {
+        baseName = 'developer'
+        version = '0.0.1'
+    }
+}
+
 //for all sub projects
 subprojects {
     if (it.name != 'base' && it.name != 'commons') {
