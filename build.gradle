@@ -70,6 +70,14 @@ project(':developer') {
     }
 }
 
+project(':device-definition') {
+    apply plugin: 'java'
+    jar {
+        baseName = 'device-definition'
+        version = '0.0.1'
+    }
+}
+
 //for all sub projects
 subprojects {
     if (it.name != 'base' && it.name != 'commons') {
