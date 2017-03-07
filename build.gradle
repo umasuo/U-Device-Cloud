@@ -78,6 +78,14 @@ project(':device-definition') {
     }
 }
 
+project(':data-point') {
+    apply plugin: 'java'
+    jar {
+        baseName = 'data-point'
+        version = '0.0.1'
+    }
+}
+
 //for all sub projects
 subprojects {
     if (it.name != 'base' && it.name != 'commons') {
