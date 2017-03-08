@@ -85,6 +85,13 @@ project(':data-definition') {
         version = '0.0.1'
     }
 }
+project(':user') {
+    apply plugin: 'java'
+    jar {
+        baseName = 'user'
+        version = '0.0.1'
+    }
+}
 
 //for all sub projects
 subprojects {

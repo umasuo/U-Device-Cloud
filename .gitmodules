@@ -40,3 +40,6 @@
 [submodule "data-definition"]
 	path = data-definition
 	url = https://github.com/umasuo/data-definition.git
+[submodule "user"]
+	path = user
+	url = https://github.com/umasuo/user.git
