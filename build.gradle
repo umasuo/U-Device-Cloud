@@ -78,10 +78,10 @@ project(':device-definition') {
     }
 }
 
-project(':data-point') {
+project(':data-definition') {
     apply plugin: 'java'
     jar {
-        baseName = 'data-point'
+        baseName = 'data-definition'
         version = '0.0.1'
     }
 }

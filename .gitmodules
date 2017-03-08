@@ -37,6 +37,6 @@
 [submodule "device-definition"]
 	path = device-definition
 	url = https://github.com/umasuo/device-definition.git
-[submodule "data-point"]
-	path = data-point
-	url = https://github.com/umasuo/data-point.git
+[submodule "data-definition"]
+	path = data-definition
+	url = https://github.com/umasuo/data-definition.git
