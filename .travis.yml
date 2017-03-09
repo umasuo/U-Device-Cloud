@@ -12,7 +12,6 @@ after_success:
 - docker login --username="$DOCKER_USERNAME" --password="$DOCKER_PASSWORD";
   docker push umasuo/config;
   docker push umasuo/customer-authentication;
-  docker push umasuo/customer-info;
   docker push umasuo/device-info;
   docker push umasuo/file-service;
   docker push umasuo/message-pusher;
