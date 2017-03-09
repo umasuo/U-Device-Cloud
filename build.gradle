@@ -93,6 +93,14 @@ project(':user') {
     }
 }
 
+project(':data-center') {
+    apply plugin: 'java'
+    jar {
+        baseName = 'data-center'
+        version = '0.0.1'
+    }
+}
+
 //for all sub projects
 subprojects {
     if (it.name != 'base' && it.name != 'commons') {

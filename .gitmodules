@@ -43,3 +43,6 @@
 [submodule "user"]
 	path = user
 	url = https://github.com/umasuo/user.git
+[submodule "data-center"]
+	path = data-center
+	url = https://github.com/umasuo/data-center.git
