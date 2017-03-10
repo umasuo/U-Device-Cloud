@@ -94,6 +94,14 @@ project(':data-center') {
     }
 }
 
+project(':data-processor') {
+    apply plugin: 'java'
+    jar {
+        baseName = 'data-processor'
+        version = '0.0.1'
+    }
+}
+
 //for all sub projects
 subprojects {
     if (it.name != 'base' && it.name != 'commons') {
