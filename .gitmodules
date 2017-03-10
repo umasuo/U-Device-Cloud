@@ -43,3 +43,6 @@
 [submodule "data-center"]
 	path = data-center
 	url = https://github.com/umasuo/data-center.git
+[submodule "data-processor"]
+	path = data-processor
+	url = https://github.com/umasuo/data-processor.git
