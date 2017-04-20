@@ -49,3 +49,6 @@
 [submodule "data-processor"]
 	path = data-processor
 	url = https://github.com/umasuo/data-processor.git
+[submodule "developer-ui"]
+	path = developer-ui
+	url = https://github.com/umasuo/developer-ui.git
