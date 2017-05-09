@@ -107,20 +107,6 @@ subprojects {
     if (it.name != 'base' && it.name != 'commons') {
         //group name
         group = 'umasuo'
-
-        // build docker image task
-        apply from: '../docker_build.gradle'
-    }
-
-    //for code analyzer
-    apply plugin: 'java'
-    apply from: '../code_analyzer/pmd.gradle'
-    apply from: '../code_analyzer/checkstyle.gradle'
-    apply from: '../code_analyzer/findbugs.gradle'
-
-    // Specify the gradle wrapper version, all use 3.0
-    task wrapper(type: Wrapper) {
-        gradleVersion = '3.1'
     }
 }
 
