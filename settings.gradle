@@ -1,7 +1,6 @@
 include 'config'
 include 'base'
 include 'commons'
-include 'customer-authentication'
 include 'file-service'
 include 'wechat'
 include 'device-info'

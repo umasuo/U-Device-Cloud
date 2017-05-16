@@ -19,13 +19,6 @@ project(':config') {
         version = '0.0.1'
     }
 }
-project(':customer-authentication') {
-    apply plugin: 'java'
-    jar {
-        baseName = 'customer-authentication'
-        version = '0.0.1'
-    }
-}
 project(':device-info') {
     apply plugin: 'java'
     jar {

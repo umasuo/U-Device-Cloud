@@ -10,9 +10,6 @@
 [submodule "commons"]
 	path = commons
 	url = https://github.com/umasuo/commons.git
-[submodule "customer-authentication"]
-	path = customer-authentication
-	url = https://github.com/umasuo/customer-authentication.git
 [submodule "base"]
 	path = base
 	url = https://github.com/umasuo/base.git
