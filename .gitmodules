@@ -49,3 +49,6 @@
 [submodule "developer-ui"]
 	path = developer-ui
 	url = https://github.com/umasuo/developer-ui.git
+[submodule "marketing-site"]
+	path = marketing-site
+	url = https://github.com/umasuo/marketing-site.git
