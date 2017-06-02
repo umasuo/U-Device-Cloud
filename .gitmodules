@@ -52,3 +52,6 @@
 [submodule "marketing-site"]
 	path = marketing-site
 	url = https://github.com/umasuo/marketing-site.git
+[submodule "api-gateway-developer"]
+	path = api-gateway-developer
+	url = https://github.com/umasuo/api-gateway-developer.git
