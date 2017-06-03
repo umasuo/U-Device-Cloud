@@ -19,10 +19,10 @@ project(':config') {
         version = '0.0.1'
     }
 }
-project(':device-info') {
+project(':device-center') {
     apply plugin: 'java'
     jar {
-        baseName = 'device-info'
+        baseName = 'device-center'
         version = '0.0.1'
     }
 }
