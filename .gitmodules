@@ -55,3 +55,6 @@
 [submodule "device-center"]
 	path = device-center
 	url = https://github.com/umasuo/device-center.git
+[submodule "report"]
+	path = report
+	url = https://github.com/umasuo/report.git
