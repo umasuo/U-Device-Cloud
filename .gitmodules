@@ -58,3 +58,6 @@
 [submodule "report"]
 	path = report
 	url = https://github.com/umasuo/report.git
+[submodule "developer-site"]
+	path = developer-site
+	url = https://github.com/umasuo/developer-site.git
