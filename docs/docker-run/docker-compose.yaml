@@ -1,0 +1,58 @@
+eva-db:
+  image: umasuo/postgres:0.0.1
+  environment:
+    POSTGRES_PASSWORD: root
+  ports:
+    - "5452:5432"
+redis:
+  image: redis
+data-center:
+  image: umasuo/data-center:0.0.1
+  ports:
+    - 8801:8801
+  links:
+    - eva-db
+  environment:
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://eva-db/data_center
+data-definition:
+  image: umasuo/data-definition:0.0.1
+  ports:
+    - 8802:8802
+  links:
+    - eva-db
+  environment:
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://eva-db/data_definition
+developer:
+  image: umasuo/developer:0.0.1
+  ports:
+    - 8804:8804
+  links:
+    - eva-db
+  environment:
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://eva-db/developer
+device-center:
+  image: umasuo/device-center:0.0.1
+  ports:
+    - 8082:8082
+  links:
+    - eva-db
+  environment:
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://eva-db/device_center
+device-definition:
+  image: umasuo/device-definition:0.0.1
+  ports:
+    - 8805:8805
+  links:
+    - eva-db
+  environment:
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://eva-db/device_definition
+user:
+  image: umasuo/user:0.0.1
+  ports:
+    - 8809:8809
+  links:
+    - eva-db
+    - redis
+  environment:
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://eva-db/users
+    - SPRING_REDIS_HOST=redis
