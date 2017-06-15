@@ -6,7 +6,7 @@ POSTGRES="psql --username ${POSTGRES_USER}"
 $POSTGRES <<EOSQL
 CREATE DATABASE data_center;
 CREATE DATABASE data_definition;
-CREATE DATABASE eva;
+CREATE DATABASE data_processor;
 CREATE DATABASE developer;
 CREATE DATABASE device_center;
 CREATE DATABASE device_definition;
