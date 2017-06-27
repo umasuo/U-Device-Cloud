@@ -16,9 +16,6 @@
 [submodule "file-service"]
 	path = file-service
 	url = https://github.com/umasuo/file-service.git
-[submodule "message-pusher"]
-	path = message-pusher
-	url = https://github.com/umasuo/message-pusher.git
 [submodule "code_analyzer"]
 	path = code_analyzer
 	url = https://github.com/umasuo/code_analyzer.git

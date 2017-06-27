@@ -33,13 +33,6 @@ project(':file-service') {
         version = '0.0.1'
     }
 }
-project(':message-pusher') {
-    apply plugin: 'java'
-    jar {
-        baseName = 'message-pusher'
-        version = '0.0.1'
-    }
-}
 project(':wechat') {
     apply plugin: 'java'
     jar {
