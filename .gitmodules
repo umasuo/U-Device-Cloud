@@ -58,3 +58,9 @@
 [submodule "developer-site"]
 	path = developer-site
 	url = https://github.com/umasuo/developer-site.git
+[submodule "message-broker"]
+	path = message-broker
+	url = https://github.com/umasuo/message-broker.git
+[submodule "feedback"]
+	path = feedback
+	url = https://github.com/umasuo/feedback.git
