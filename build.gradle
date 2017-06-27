@@ -16,28 +16,28 @@ project(':config') {
     apply plugin: 'java'
     jar {
         baseName = 'config'
-        version = '0.0.1'
+        version = '0.1'
     }
 }
 project(':device-center') {
     apply plugin: 'java'
     jar {
         baseName = 'device-center'
-        version = '0.0.1'
+        version = '0.1'
     }
 }
 project(':file-service') {
     apply plugin: 'java'
     jar {
         baseName = 'file-service'
-        version = '0.0.1'
+        version = '0.1'
     }
 }
 project(':wechat') {
     apply plugin: 'java'
     jar {
         baseName = 'wechat'
-        version = '0.0.1'
+        version = '0.1'
     }
 }
 
@@ -45,7 +45,7 @@ project(':developer') {
     apply plugin: 'java'
     jar {
         baseName = 'developer'
-        version = '0.0.1'
+        version = '0.1'
     }
 }
 
@@ -53,7 +53,7 @@ project(':device-definition') {
     apply plugin: 'java'
     jar {
         baseName = 'device-definition'
-        version = '0.0.1'
+        version = '0.1'
     }
 }
 
@@ -61,14 +61,14 @@ project(':data-definition') {
     apply plugin: 'java'
     jar {
         baseName = 'data-definition'
-        version = '0.0.1'
+        version = '0.1'
     }
 }
 project(':user') {
     apply plugin: 'java'
     jar {
         baseName = 'user'
-        version = '0.0.1'
+        version = '0.1'
     }
 }
 
@@ -76,7 +76,7 @@ project(':data-center') {
     apply plugin: 'java'
     jar {
         baseName = 'data-center'
-        version = '0.0.1'
+        version = '0.1'
     }
 }
 
@@ -84,7 +84,23 @@ project(':data-processor') {
     apply plugin: 'java'
     jar {
         baseName = 'data-processor'
-        version = '0.0.1'
+        version = '0.1'
+    }
+}
+
+project(':report') {
+    apply plugin: 'java'
+    jar {
+        baseName = 'report'
+        version = '0.1'
+    }
+}
+
+project(':feedback') {
+    apply plugin: 'java'
+    jar {
+        baseName = 'feedback'
+        version = '0.1'
     }
 }
 
