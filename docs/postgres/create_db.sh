@@ -12,4 +12,6 @@ CREATE DATABASE device_center;
 CREATE DATABASE device_definition;
 CREATE DATABASE users;
 CREATE DATABASE wechat;
+CREATE DATABASE feedback;
+CREATE DATABASE report;
 EOSQL
