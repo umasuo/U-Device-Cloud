@@ -1,0 +1,46 @@
+kind: List
+apiVersion: v1
+items:
+- kind: Deployment
+  apiVersion: extensions/v1beta1
+  metadata:
+    name: eva-data
+  spec:
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          name: eva-data
+      spec:
+        containers:
+        - name: eva-data
+          image: umasuo/postgres:0.0.1
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 5432
+          env:
+          - name: MAX_CONNECTIONS
+            value: "500"
+          - name: POSTGRES_USER
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: postgres.username
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: postgres.password
+- kind: Service
+  apiVersion: v1
+  metadata:
+    name: eva-data
+    labels:
+      name: eva-data
+  spec:
+    type: NodePort
+    ports:
+    - port: 5432
+      nodePort: 30130
+    selector: 
+      name: eva-data

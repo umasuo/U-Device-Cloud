@@ -1,0 +1,60 @@
+kind: List
+apiVersion: v1
+items:
+- kind: Deployment
+  apiVersion: extensions/v1beta1
+  metadata:
+    name: data-definition
+  spec:
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          name: data-definition
+      spec:
+        containers:
+        - name: data-definition
+          image: umasuo/data-definition:0.1
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+          env:
+          - name: server_port
+            value: "80"
+          - name: spring_cloud_config_uri
+            value: http://eva-config
+          - name: developer_service_uri
+            value: http://developer/
+          - name: spring_datasource_url
+            value: jdbc:postgresql://eva-data/data_definition
+          - name: spring_redis_host
+            value: redis
+          - name: spring_datasource_username
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: postgres.username
+          - name: spring_datasource_password
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: postgres.password
+          - name: jwt_secret
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: jwt.secret
+- kind: Service
+  apiVersion: v1
+  metadata:
+    name: data-definition
+    labels:
+      name: data-definition
+  spec:
+    type: NodePort
+    ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30102
+    selector:
+      name: data-definition

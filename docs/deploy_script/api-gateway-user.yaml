@@ -1,0 +1,40 @@
+kind: List
+apiVersion: v1
+items:
+- kind: Deployment
+  apiVersion: extensions/v1beta1
+  metadata:
+    name: api-gateway-user
+  spec:
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          name: api-gateway-user
+      spec:
+        containers:
+        - name: api-gateway-user
+          image: umasuo/api-gateway-user:0.1
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+          env:
+          - name: server_port
+            value: "80"
+          - name: spring_cloud_config_uri
+            value: http://eva-config
+          - name: user_service_uri
+            value: http://user
+- kind: Service
+  apiVersion: v1
+  metadata:
+    name: api-gateway-user
+    labels:
+      name: api-gateway-user
+  spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      nodePort: 30127
+    selector:
+      name: api-gateway-user
