@@ -1,0 +1,60 @@
+kind: List
+apiVersion: v1
+items:
+- kind: Deployment
+  apiVersion: extensions/v1beta1
+  metadata:
+    name: data-center
+  spec:
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          name: data-center
+      spec:
+        containers:
+        - name: data-center
+          image: umasuo/data-center:0.1
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+          env:
+          - name: server_port
+            value: "80"
+          - name: spring_cloud_config_uri
+            value: http://eva-config
+          - name: device_center_service_url
+            value: http://device-center/
+          - name: data_definition_service_url
+            value: http://data-definition/
+          - name: spring_datasource_url
+            value: jdbc:postgresql://eva-data/data_center
+          - name: spring_datasource_username
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: postgres.username
+          - name: spring_datasource_password
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: postgres.password
+          - name: jwt_secret
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: jwt.secret
+- kind: Service
+  apiVersion: v1
+  metadata:
+    name: data-center
+    labels:
+      name: data-center
+  spec:
+    type: NodePort
+    ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30101
+    selector:
+      name: data-center

@@ -1,0 +1,56 @@
+kind: List
+apiVersion: v1
+items:
+- kind: Deployment
+  apiVersion: extensions/v1beta1
+  metadata:
+    name: feedback
+  spec:
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          name: feedback
+      spec:
+        containers:
+        - name: feedback
+          image: umasuo/feedback:0.1
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+          env:
+          - name: server_port
+            value: "80"
+          - name: spring_cloud_config_uri
+            value: http://eva-config
+          - name: spring_datasource_url
+            value: jdbc:postgresql://eva-data/feedback
+          - name: spring_datasource_username
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: postgres.username
+          - name: spring_datasource_password
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: postgres.password
+          - name: jwt_secret
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: jwt.secret
+- kind: Service
+  apiVersion: v1
+  metadata:
+    name: feedback
+    labels:
+      name: feedback
+  spec:
+    type: NodePort
+    ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30110
+    selector:
+      name: feedback

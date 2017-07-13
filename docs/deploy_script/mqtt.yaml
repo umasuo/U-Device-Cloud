@@ -1,0 +1,45 @@
+kind: List
+apiVersion: v1
+items:
+- kind: Deployment
+  apiVersion: extensions/v1beta1
+  metadata:
+    name: message-broker
+  spec:
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          name: message-broker
+      spec:
+        containers:
+        - name: message-broker
+          image: umasuo/message-broker:1.1
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 1883
+          env:
+          - name: emq_listener__tcp__external
+            value: '1883'
+          - name: emq_mqtt_allow_anonymous
+            value: 'false'
+          - name: emq_loaded_plugins
+            value: emq_auth_redis,emq_recon,emq_modules,emq_retainer,emq_dashboard
+          - name: emq_auth_redis_server
+            value: redis
+          - name: emq_auth_redis_password_hash
+            value: plain
+- kind: Service
+  apiVersion: v1
+  metadata:
+    name: message-broker
+    labels:
+      name: message-broker
+  spec:
+    type: NodePort
+    ports:
+    - port: 1883
+      targetPort: 1883
+      nodePort: 30132
+    selector:
+      name: message-broker
