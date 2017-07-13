@@ -64,3 +64,6 @@
 [submodule "feedback"]
 	path = feedback
 	url = https://github.com/umasuo/feedback.git
+[submodule "api-gateway-user"]
+	path = api-gateway-user
+	url = https://github.com/umasuo/api-gateway-user.git
