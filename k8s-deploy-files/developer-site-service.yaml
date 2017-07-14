@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: developer-site
+  labels:
+    name: developer-site
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 3000
+      nodePort: 30126
+  selector:
+    name: developer-site
