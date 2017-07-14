@@ -14,7 +14,7 @@ items:
       spec:
         containers:
         - name: device
-          image: umasuo/device-center:0.1
+          image: umasuo/device-center:0.2
           imagePullPolicy: Always
           ports:
           - containerPort: 80

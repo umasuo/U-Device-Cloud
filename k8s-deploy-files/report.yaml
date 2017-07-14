@@ -25,7 +25,7 @@ items:
             value: http://eva-config
           - name: user_service_url
             value: http://user/
-          - name: device_service_url
+          - name: device_center_service_url
             value: http://device/
           - name: spring_datasource_url
             value: jdbc:postgresql://eva-data/report
