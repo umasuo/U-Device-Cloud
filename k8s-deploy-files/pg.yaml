@@ -14,7 +14,7 @@ items:
       spec:
         containers:
         - name: eva-data
-          image: umasuo/postgres:0.0.1
+          image: umasuo/postgres:0.2
           imagePullPolicy: Always
           ports:
           - containerPort: 5432

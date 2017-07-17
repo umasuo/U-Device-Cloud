@@ -12,7 +12,13 @@ kubectl create -f developer.yaml
 kubectl create -f device.yaml
 kubectl create -f product.yaml
 kubectl create -f user.yaml
+kubectl create -f feedback.yaml
+kubectl create -f report.yaml
+kubectl create -f file.yaml
+kubectl create -f api-gateway-user.yaml
 kubectl create -f api-gateway-developer.yaml
+kubectl create -f developer-site-deployment.yaml
+kubectl create -f developer-site-service.yaml
 ```
 
 ```shell

@@ -14,7 +14,7 @@ items:
       spec:
         containers:
         - name: product
-          image: umasuo/device-definition:0.1
+          image: umasuo/product:0.2
           imagePullPolicy: Always
           ports:
           - containerPort: 80
