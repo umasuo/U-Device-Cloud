@@ -4,16 +4,16 @@ items:
 - kind: Deployment
   apiVersion: extensions/v1beta1
   metadata:
-    name: file-service
+    name: file
   spec:
     replicas: 1
     template:
       metadata:
         labels:
-          name: file-service
+          name: file
       spec:
         containers:
-        - name: feedback
+        - name: file
           image: umasuo/file-service:0.1
           imagePullPolicy: Always
           ports:
@@ -45,9 +45,9 @@ items:
 - kind: Service
   apiVersion: v1
   metadata:
-    name: file-service
+    name: file
     labels:
-      name: file-service
+      name: file
   spec:
     type: NodePort
     ports:
@@ -55,4 +55,4 @@ items:
       targetPort: 80
       nodePort: 30107
     selector:
-      name: file-service
+      name: file
