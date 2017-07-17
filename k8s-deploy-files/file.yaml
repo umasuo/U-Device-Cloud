@@ -26,7 +26,7 @@ items:
           - name: spring_datasource_url
             value: jdbc:postgresql://eva-data/file_storage
           - name: gcloud_storage_bucket
-            value: test1231
+            value: test-20170716
           - name: spring_datasource_username
             valueFrom:
               secretKeyRef:
