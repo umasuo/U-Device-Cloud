@@ -24,7 +24,7 @@ items:
           - name: spring_cloud_config_uri
             value: http://eva-config
           - name: device_center_service_url
-            value: http://device-center/
+            value: http://device/
           - name: data_definition_service_url
             value: http://data-definition/
           - name: spring_datasource_url
