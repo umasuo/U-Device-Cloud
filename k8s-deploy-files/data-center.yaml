@@ -44,6 +44,14 @@ items:
               secretKeyRef:
                 name: eva-secret
                 key: jwt.secret
+          - name: message_broker_host
+            value: message-broker
+          - name: message_broker_port
+            value: '1883'
+          - name: message_broker_username
+            value: umasuo
+          - name: message_broker_password
+            value: password
 - kind: Service
   apiVersion: v1
   metadata:
