@@ -29,6 +29,8 @@ items:
             value: http://data-definition/
           - name: spring_datasource_url
             value: jdbc:postgresql://eva-data/data_center
+          - name: spring_redis_host
+            value: redis
           - name: spring_datasource_username
             valueFrom:
               secretKeyRef:
