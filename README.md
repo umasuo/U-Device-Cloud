@@ -10,6 +10,7 @@ Eva云平台是一个全球化的、易于使用的公有云平台。为智能�
 下图为Eva云平台的基本工作模式：
 ![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/basic_structure.png)
 
+`注意：Eva 云平台为手机App、智能硬件提供了两种通信方式：HTTP, HTTPS, MQTT。具体使用哪种，请参考具体的未开发文档。`
 
 # 产品基本接入流程
 ![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/basic_flow.png)
@@ -54,6 +55,40 @@ Eva云平台是一个全球化的、易于使用的公有云平台。为智能�
 
 `备注：这里只是产品接入的概述，详细内容请查看详细介绍文档。`
 
+# 实时、精准的运营数据
+与传统硬件产品相比，智能硬件产品对运营的需求有着明显的差别，针对此，本平台提供了设备、用户的实时数据报表来提供更好的运营支撑。
+
+- 实时数据
+
+实时数据包括了：今日目前新激活设备数、当前在线设备、新增用户、总用户。
+![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/report_realtime.png)
+
+- 设备方面的运营数据
+
+设备运营方面的数据包括了以下数据：新增激活设备、活跃设备、总设备三种数据统计
+![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/report_increase_device.png)
+![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/report_activity_device.png)
+![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/report_total_device.png)
+
+- 用户方面的运营数据
+![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/report_increase_user.png)
+![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/report_activity_user.png)
+![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/report_total_user.png)
+
+- 设备管理运营能力
+
+设备管理功能，为开发者提供了查看、管理所有已激活的设备：
+![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/device_manager.png)
+
+- 用户管理运营能力
+
+用户管理功能，为开发者提供了查看、管理所有注册的用户：
+![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/user_manager.png)
+
+- 用户反馈
+
+用户在使用过程中，如果遇到任何问题，可直接提交反馈给开发者，开发者可查看、处理用户的反馈，保证用户的体验：
+![image](https://raw.githubusercontent.com/umasuo/eva-cloud/master/docs/res/feedback.png)
 
 # Eva云平台的特点
 
