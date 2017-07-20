@@ -14,7 +14,7 @@ items:
       spec:
         containers:
         - name: user
-          image: umasuo/user:0.1
+          image: evacloud/user:0.2
           imagePullPolicy: Always
           ports:
           - containerPort: 80
@@ -49,9 +49,15 @@ items:
           - name: message_broker_port
             value: '1883'
           - name: message_broker_username
-            value: umasuo
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: user.broker.username
           - name: message_broker_password
-            value: password
+            valueFrom:
+              secretKeyRef:
+                name: eva-secret
+                key: user.broker.password
           - name: sms_yunpian_key
             valueFrom:
               secretKeyRef:
