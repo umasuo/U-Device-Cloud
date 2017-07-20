@@ -9,7 +9,7 @@ CREATE DATABASE data_definition;
 CREATE DATABASE data_processor;
 CREATE DATABASE developer;
 CREATE DATABASE device_center;
-CREATE DATABASE device_definition;
+CREATE DATABASE product;
 CREATE DATABASE users;
 CREATE DATABASE wechat;
 CREATE DATABASE feedback;
