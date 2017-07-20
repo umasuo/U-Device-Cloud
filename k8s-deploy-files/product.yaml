@@ -28,7 +28,7 @@ items:
           - name: datadefinition_service_uri
             value: http://data-definition/data-definitions/
           - name: spring_datasource_url
-            value: jdbc:postgresql://eva-data/product
+            value: jdbc:postgresql://eva-data/device_definition
           - name: spring_redis_host
             value: redis
           - name: spring_datasource_username
