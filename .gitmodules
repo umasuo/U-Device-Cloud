@@ -67,3 +67,6 @@
 [submodule "api-gateway-user"]
 	path = api-gateway-user
 	url = https://github.com/umasuo/api-gateway-user.git
+[submodule "product"]
+	path = product
+	url = https://github.com/umasuo/product.git
