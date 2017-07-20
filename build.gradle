@@ -49,10 +49,10 @@ project(':developer') {
     }
 }
 
-project(':device-definition') {
+project(':product') {
     apply plugin: 'java'
     jar {
-        baseName = 'device-definition'
+        baseName = 'product'
         version = '0.1'
     }
 }
