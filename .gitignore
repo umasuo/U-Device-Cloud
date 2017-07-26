@@ -81,3 +81,7 @@ hs_err_pid*
 */gradle
 /gradle
 gradlew*
+
+# Ignored npm & gitbook build files
+/node_modules
+/_book

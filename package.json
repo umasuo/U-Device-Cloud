@@ -1,0 +1,25 @@
+{
+  "name": "eva-cloud",
+  "version": "1.0.0",
+  "description": "Eva云平台是一个全球化的、易于使用的公有云平台。为智能硬件开发者或企业提供`全生命周期`、`完整`的智能化解决方案。",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:watch": "gitbook install && gitbook serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umasuo/eva-cloud.git"
+  },
+  "author": "Alan Zhang <gagazcfan@icloud.com> (http://alanslab.space)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umasuo/eva-cloud/issues"
+  },
+  "homepage": "https://github.com/umasuo/eva-cloud#readme",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
