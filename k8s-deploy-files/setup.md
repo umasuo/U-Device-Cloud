@@ -35,3 +35,22 @@ kubectl delete -f product.yaml
 kubectl delete -f user.yaml
 kubectl delete -f api-gateway-developer.yaml
 ```
+
+## GKE 上部署
+
+GKE上做辅助节点，不需要部署全部服务
+
+```shell
+kubectl create -f secret.yaml
+kubectl create -f pg.yaml
+kubectl create -f redis.yaml
+kubectl create -f mqtt.yaml
+kubectl create -f config.yaml
+kubectl create -f data-center.yaml
+kubectl create -f device.yaml
+kubectl create -f product.yaml
+kubectl create -f user.yaml
+kubectl create -f feedback.yaml
+kubectl create -f file.yaml
+kubectl create -f api-gateway-user.yaml
+```
