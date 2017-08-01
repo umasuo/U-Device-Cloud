@@ -46,6 +46,7 @@ kubectl create -f pg.yaml
 kubectl create -f redis.yaml
 kubectl create -f mqtt.yaml
 kubectl create -f config.yaml
+kubectl create -f data-definition.yaml
 kubectl create -f data-center.yaml
 kubectl create -f device.yaml
 kubectl create -f product.yaml
