@@ -14,7 +14,7 @@ items:
       spec:
         containers:
         - name: data-definition
-          image: umasuo/data-definition:0.1
+          image: evacloud/data-definition:0.1
           imagePullPolicy: Always
           ports:
           - containerPort: 80

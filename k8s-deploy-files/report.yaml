@@ -14,7 +14,7 @@ items:
       spec:
         containers:
         - name: report
-          image: umasuo/report:0.1
+          image: evacloud/report:0.1
           imagePullPolicy: Always
           ports:
           - containerPort: 80

@@ -14,7 +14,7 @@ items:
       spec:
         containers:
         - name: file
-          image: umasuo/file-service:0.1
+          image: evacloud/file-service:0.1
           imagePullPolicy: Always
           ports:
           - containerPort: 80

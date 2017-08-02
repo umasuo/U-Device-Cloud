@@ -14,7 +14,7 @@ items:
       spec:
         containers:
         - name: message-broker
-          image: umasuo/message-broker:1.1
+          image: evacloud/message-broker:1.1
           imagePullPolicy: Always
           ports:
           - containerPort: 1883

@@ -14,7 +14,7 @@ items:
       spec:
         containers:
         - name: api-gateway-user
-          image: umasuo/api-gateway-user:0.1
+          image: evacloud/api-gateway-user:0.1
           imagePullPolicy: Always
           ports:
           - containerPort: 80

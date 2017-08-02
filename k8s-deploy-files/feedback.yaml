@@ -14,7 +14,7 @@ items:
       spec:
         containers:
         - name: feedback
-          image: umasuo/feedback:0.1
+          image: evacloud/feedback:0.1
           imagePullPolicy: Always
           ports:
           - containerPort: 80

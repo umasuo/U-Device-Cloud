@@ -14,7 +14,7 @@ items:
       spec:
         containers:
         - name: data-center
-          image: umasuo/data-center:0.1
+          image: evacloud/data-center:0.1
           imagePullPolicy: Always
           ports:
           - containerPort: 80
