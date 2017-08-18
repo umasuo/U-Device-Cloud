@@ -1,0 +1,1 @@
+docker run -d --name redis redis:3.2
