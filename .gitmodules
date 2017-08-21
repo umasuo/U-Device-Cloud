@@ -19,9 +19,6 @@
 [submodule "developer"]
 	path = developer
 	url = https://github.com/umasuo/developer.git
-[submodule "device-definition"]
-	path = device-definition
-	url = https://github.com/umasuo/device-definition.git
 [submodule "data-definition"]
 	path = data-definition
 	url = https://github.com/umasuo/data-definition.git
