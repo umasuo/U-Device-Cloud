@@ -1,6 +1,7 @@
 include 'config'
 include 'api-gateway-developer'
 include 'api-gateway-user'
+include 'api-gateway-admin'
 include 'commons'
 include 'file-service'
 include 'wechat'
