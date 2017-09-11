@@ -64,3 +64,9 @@
 [submodule "product"]
 	path = product
 	url = https://github.com/umasuo/product.git
+[submodule "api-gateway-admin"]
+	path = api-gateway-admin
+	url = https://github.com/umasuo/api-gateway-admin.git
+[submodule "admin-site"]
+	path = admin-site
+	url = https://github.com/umasuo/admin-site.git
